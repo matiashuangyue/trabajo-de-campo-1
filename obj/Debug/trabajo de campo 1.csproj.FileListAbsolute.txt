@@ -1,0 +1,13 @@
+D:\UAI\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\bin\Debug\trabajo de campo 1.exe.config
+D:\UAI\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\bin\Debug\trabajo de campo 1.exe
+D:\UAI\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\bin\Debug\trabajo de campo 1.pdb
+D:\UAI\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo de campo 1.csproj.AssemblyReference.cache
+D:\UAI\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo de campo 1.csproj.SuggestedBindingRedirects.cache
+D:\UAI\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo_de_campo_1.FormLogin.resources
+D:\UAI\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo_de_campo_1.Properties.Resources.resources
+D:\UAI\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo de campo 1.csproj.GenerateResource.cache
+D:\UAI\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo de campo 1.csproj.CoreCompileInputs.cache
+D:\UAI\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo de campo 1.exe
+D:\UAI\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo de campo 1.pdb
+D:\UAI\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo_de_campo_1.GestionarProducto.resources
+D:\UAI\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo_de_campo_1.PantallaPrincipal.resources
