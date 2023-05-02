@@ -40,11 +40,15 @@ namespace trabajo_de_campo_1
             GestionarProvedor();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        public void VolverAPaginaAnterior()
         {
             FormLogin formLogin = new FormLogin();
             formLogin.Show();
             this.Close();
+        }
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            VolverAPaginaAnterior();
         }
     }
 }

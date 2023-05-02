@@ -16,5 +16,21 @@ namespace trabajo_de_campo_1
         {
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            VolverAPantallaPrincipal pantallaPrincipal = new VolverAPantallaPrincipal();
+            pantallaPrincipal.IrAPantallaPrincipal();
+            this.Close();
+        }
+    }
+    public class VolverAPantallaPrincipal
+    {
+        public void IrAPantallaPrincipal()
+        {
+            PantallaPrincipal pantallaPrincipal = new PantallaPrincipal();
+            pantallaPrincipal.Show();
+            
+        } 
     }
 }

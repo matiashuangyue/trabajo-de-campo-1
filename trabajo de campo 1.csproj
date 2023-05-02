@@ -76,6 +76,9 @@
     <EmbeddedResource Include="GestionarProducto.resx">
       <DependentUpon>GestionarProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GestionarProvedor.resx">
+      <DependentUpon>GestionarProvedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
