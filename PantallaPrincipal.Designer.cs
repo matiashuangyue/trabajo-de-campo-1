@@ -42,7 +42,7 @@
             this.btnCompra.Name = "btnCompra";
             this.btnCompra.Size = new System.Drawing.Size(315, 65);
             this.btnCompra.TabIndex = 0;
-            this.btnCompra.Text = "Solicitud De Compra";
+            this.btnCompra.Text = "Realizar Compra";
             this.btnCompra.UseVisualStyleBackColor = true;
             // 
             // btnInforme
