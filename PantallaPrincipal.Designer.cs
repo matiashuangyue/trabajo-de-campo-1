@@ -33,6 +33,7 @@
             this.btnGestionarProducto = new System.Windows.Forms.Button();
             this.btnGestionarProvedor = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.btnControlStock = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCompra
@@ -83,11 +84,21 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // btnControlStock
+            // 
+            this.btnControlStock.Location = new System.Drawing.Point(456, 22);
+            this.btnControlStock.Name = "btnControlStock";
+            this.btnControlStock.Size = new System.Drawing.Size(315, 65);
+            this.btnControlStock.TabIndex = 5;
+            this.btnControlStock.Text = "Control de stock ";
+            this.btnControlStock.UseVisualStyleBackColor = true;
+            // 
             // PantallaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnControlStock);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnGestionarProvedor);
             this.Controls.Add(this.btnGestionarProducto);
@@ -106,5 +117,6 @@
         private System.Windows.Forms.Button btnGestionarProducto;
         private System.Windows.Forms.Button btnGestionarProvedor;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnControlStock;
     }
 }
