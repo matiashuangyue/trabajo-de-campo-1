@@ -29,6 +29,19 @@ namespace trabajo_de_campo_1
             GestionarProvedor.Show();
             this.Hide();
         }
+        public void GestionarCompra()
+        {
+            Gestionar_Compra GestionarCompra = new Gestionar_Compra();
+            GestionarCompra.Show();
+            this.Hide();
+        }
+
+        public void ControlDeStock()
+        {
+            control_de_stock ControlDeStock = new control_de_stock();
+            ControlDeStock.Show();
+            this.Hide();
+        }
 
         private void btnGestionarProducto_Click(object sender, EventArgs e)
         {
@@ -39,7 +52,15 @@ namespace trabajo_de_campo_1
         {
             GestionarProvedor();
         }
+        private void btnControlStock_Click(object sender, EventArgs e)
+         {
+            ControlDeStock();
+         }       
 
+        private void btnGestionarCompra_Click(object sender, EventArgs e)
+         {
+             GestionarCompra();
+         }
         public void VolverAPaginaAnterior()
         {
             FormLogin formLogin = new FormLogin();
@@ -50,5 +71,7 @@ namespace trabajo_de_campo_1
         {
             VolverAPaginaAnterior();
         }
+
+        
     }
 }

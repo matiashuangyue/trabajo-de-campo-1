@@ -33,22 +33,29 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(538, 303);
+            this.btnBack.BackColor = System.Drawing.Color.Cornsilk;
+            this.btnBack.Location = new System.Drawing.Point(807, 323);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(160, 44);
+            this.btnBack.Size = new System.Drawing.Size(240, 47);
             this.btnBack.TabIndex = 0;
-            this.btnBack.Text = "back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Text = "Volver A Pantalla Principal";
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // GestionarProvedor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::trabajo_de_campo_1.Properties.Resources.clouds_bubble_pop_art_y8iuv5agjzzczq9v;
+            this.ClientSize = new System.Drawing.Size(1200, 480);
             this.Controls.Add(this.btnBack);
+            this.Font = new System.Drawing.Font("Headline R", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "GestionarProvedor";
             this.Text = "GestionarProvedor";
+            this.Load += new System.EventHandler(this.GestionarProvedor_Load);
             this.ResumeLayout(false);
 
         }

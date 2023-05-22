@@ -10,14 +10,21 @@ using System.Windows.Forms;
 
 namespace trabajo_de_campo_1
 {
-    public partial class Solicitud_De_Compra : Form
+    public partial class Gestionar_Compra : Form
     {
-        public Solicitud_De_Compra()
+        public Gestionar_Compra()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            VolverAPantallaPrincipal pantallaPrincipal = new VolverAPantallaPrincipal();
+            pantallaPrincipal.IrAPantallaPrincipal();
+            this.Close();
+        }
+
+        private void Gestionar_Compra_Load(object sender, EventArgs e)
         {
 
         }

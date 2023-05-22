@@ -16,5 +16,22 @@ namespace trabajo_de_campo_1
         {
             InitializeComponent();
         }
+
+        public void VolverAPantallaAnterior()
+        {
+            control_de_stock ControlDeStock = new control_de_stock();
+            ControlDeStock.Show();
+            this.Hide();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            VolverAPantallaAnterior();
+        }
+
+        private void Ingresar_Stock_de_Mercaderia_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

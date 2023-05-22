@@ -23,5 +23,10 @@ namespace trabajo_de_campo_1
             pantallaPrincipal.IrAPantallaPrincipal();
             this.Close();
         }
+
+        private void GestionarProvedor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

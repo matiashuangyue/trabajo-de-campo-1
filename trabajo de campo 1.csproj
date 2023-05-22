@@ -117,6 +117,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Solicitud De Compra.resx">
       <DependentUpon>Solicitud De Compra.cs</DependentUpon>
@@ -133,6 +134,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panda.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clouds-bubble-pop-art-y8iuv5agjzzczq9v.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
