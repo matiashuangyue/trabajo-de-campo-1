@@ -26,13 +26,13 @@ namespace trabajo_de_campo_1
                 using(SqlConnection conn = new SqlConnection(cnn))
                 {
                     conn.Open();
-                    using (SqlCommand cmd = new SqlCommand("SELECT id , contraseña FROM Usuarios where id ='"+txtUser.Text+"'AND contraseña='"+txtPassword.Text+"'", conn))
+                    using (SqlCommand cmd = new SqlCommand("SELECT ID_Usuario , Contraseña_Usuario FROM Usuarios where ID_Usuario ='"+txtUser.Text+"'AND Contraseña_Usuario='"+txtPassword.Text+"'", conn))
                     {
                         SqlDataReader dr = cmd.ExecuteReader();
                         if (dr.Read())
                         {
                             cambiarformulario();
-                            conn.Close();
+                            conn.Close();   
                         }
                         else
                         {
@@ -72,6 +72,13 @@ namespace trabajo_de_campo_1
         private void FormLogin_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            SignUp signUp = new SignUp();
+            signUp.Show();
+            this.Hide();
         }
     }
 }

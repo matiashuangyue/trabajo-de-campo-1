@@ -34,15 +34,16 @@
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnSignUp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.Cornsilk;
-            this.btnLogin.Location = new System.Drawing.Point(319, 325);
+            this.btnLogin.Location = new System.Drawing.Point(345, 327);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(223, 67);
+            this.btnLogin.Size = new System.Drawing.Size(172, 49);
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -55,9 +56,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.MenuText;
             this.label1.Location = new System.Drawing.Point(202, 195);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 24);
+            this.label1.Size = new System.Drawing.Size(28, 24);
             this.label1.TabIndex = 1;
-            this.label1.Text = "User";
+            this.label1.Text = "ID";
             // 
             // label2
             // 
@@ -99,6 +100,17 @@
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // btnSignUp
+            // 
+            this.btnSignUp.BackColor = System.Drawing.Color.Cornsilk;
+            this.btnSignUp.Location = new System.Drawing.Point(345, 384);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(172, 49);
+            this.btnSignUp.TabIndex = 6;
+            this.btnSignUp.Text = "SIGN UP";
+            this.btnSignUp.UseVisualStyleBackColor = false;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
@@ -106,6 +118,7 @@
             this.BackColor = System.Drawing.Color.Bisque;
             this.BackgroundImage = global::trabajo_de_campo_1.Properties.Resources.clouds_bubble_pop_art_y8iuv5agjzzczq9v;
             this.ClientSize = new System.Drawing.Size(832, 467);
+            this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUser);
@@ -133,6 +146,7 @@
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnSignUp;
     }
 }
 
