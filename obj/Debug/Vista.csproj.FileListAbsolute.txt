@@ -1,0 +1,24 @@
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\bin\Debug\trabajo de campo 1.exe.config
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\bin\Debug\trabajo de campo 1.exe
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\bin\Debug\trabajo de campo 1.pdb
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\bin\Debug\Modelo.dll
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\bin\Debug\Controladora.dll
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\bin\Debug\Modelo.pdb
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\bin\Debug\Modelo.dll.config
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\bin\Debug\Controladora.pdb
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\Vista.csproj.AssemblyReference.cache
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\Vista.csproj.SuggestedBindingRedirects.cache
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo_de_campo_1.control_de_stock.resources
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo_de_campo_1.GestionarProducto.resources
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo_de_campo_1.GestionarProvedor.resources
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo_de_campo_1.Ingresar_Stock_de_Mercaderia.resources
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo_de_campo_1.FormLogin.resources
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo_de_campo_1.PantallaPrincipal.resources
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo_de_campo_1.Properties.Resources.resources
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo_de_campo_1.Gestionar_Compra.resources
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo_de_campo_1.SignUp.resources
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\Vista.csproj.GenerateResource.cache
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\Vista.csproj.CoreCompileInputs.cache
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\Vista.csproj.CopyComplete
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo de campo 1.exe
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo de campo 1.pdb

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Data.SqlClient;
+using Modelo;
 
 namespace trabajo_de_campo_1
 {
@@ -18,37 +19,9 @@ namespace trabajo_de_campo_1
         {
             InitializeComponent();
         }
-        public void logins()
-        {
-            try
-            {
-                string cnn = ConfigurationManager.ConnectionStrings["cnn"].ConnectionString;
-                using(SqlConnection conn = new SqlConnection(cnn))
-                {
-                    conn.Open();
-                    using (SqlCommand cmd = new SqlCommand("SELECT ID_Usuario , Contraseña_Usuario FROM Usuarios where ID_Usuario ='"+txtUser.Text+"'AND Contraseña_Usuario='"+txtPassword.Text+"'", conn))
-                    {
-                        SqlDataReader dr = cmd.ExecuteReader();
-                        if (dr.Read())
-                        {
-                            cambiarformulario();
-                            conn.Close();   
-                        }
-                        else
-                        {
-                            MessageBox.Show("Datos incorrectos");
-                            conn.Close();
-                        }
-                    }
-                }
-            }
-            catch(Exception ex ) 
-            {
-                MessageBox.Show(ex.ToString());
-            }    
-        }
         
-            public void cambiarformulario()
+
+        public void cambiarformulario()
         {
             PantallaPrincipal pantalla1 = new PantallaPrincipal();
             pantalla1.Show();
@@ -60,8 +33,23 @@ namespace trabajo_de_campo_1
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            logins();
-            
+            if (txtUser != null)
+            {
+                if (txtPassword != null)
+                {
+                    ModLogin  User= new ModLogin();
+                    var LoginValido = User.InicialSesion(txtUser.Text, txtPassword.Text);
+                    if (LoginValido)
+                    {
+                        cambiarformulario();
+                    }
+                    else
+                    {
+                        MessageBox.Show("El Usuario o Contrasena es invalido");
+                    }
+                }
+            }
+
         }
 
         private void label3_Click(object sender, EventArgs e)

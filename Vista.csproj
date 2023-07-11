@@ -150,5 +150,11 @@
   <ItemGroup>
     <None Include="Resources\clouds-bubble-pop-art-y8iuv5agjzzczq9v.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Modelo\Modelo.csproj">
+      <Project>{4dc8cab8-23f7-454e-9355-4d62de27db18}</Project>
+      <Name>Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
