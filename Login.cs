@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using System.Data.SqlClient;
-using Modelo;
+using Controladora;
 
 namespace trabajo_de_campo_1
 {
@@ -37,7 +37,7 @@ namespace trabajo_de_campo_1
             {
                 if (txtPassword != null)
                 {
-                    ModLogin  User= new ModLogin();
+                    ControlLogin  User= new ControlLogin();
                     var LoginValido = User.InicialSesion(txtUser.Text, txtPassword.Text);
                     if (LoginValido)
                     {

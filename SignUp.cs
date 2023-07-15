@@ -71,7 +71,7 @@ namespace trabajo_de_campo_1
         {
 
         }
-
+        /*
         public static bool IsValidID(string DNI) 
         {
             if (string.IsNullOrWhiteSpace(DNI))
@@ -156,7 +156,7 @@ namespace trabajo_de_campo_1
             }
       
         }
-
+        */
         public void VolverALogin()
         {
             FormLogin formLogin = new FormLogin();
@@ -167,8 +167,12 @@ namespace trabajo_de_campo_1
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-          
-            Validaciones();
+           Controladora.ControlSignUp signUp = new Controladora.ControlSignUp();
+            if(signUp.RegistrarCuenta(txtID.Text, txtName.Text, txtPassWord.Text, txtMail.Text) == false)
+            {
+                MessageBox.Show("chequea sus datos porfavor");
+            }
+           // Validaciones();
 
         }
 

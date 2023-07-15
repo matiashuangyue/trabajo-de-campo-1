@@ -19,13 +19,13 @@ namespace trabajo_de_campo_1
 
         public void GestionarProducto()
         {
-            GestionarProducto GestionarProducto = new GestionarProducto();
+            GestionarProductos GestionarProducto = new GestionarProductos();
             GestionarProducto.Show();
             this.Hide();
         }
         public void GestionarProvedor()
         {
-            GestionarProvedor GestionarProvedor = new GestionarProvedor();
+            GestionarProveedores GestionarProvedor = new GestionarProveedores();
             GestionarProvedor.Show();
             this.Hide();
         }

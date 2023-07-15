@@ -53,17 +53,17 @@
     <Compile Include="control de stock.Designer.cs">
       <DependentUpon>control de stock.cs</DependentUpon>
     </Compile>
-    <Compile Include="GestionarProducto.cs">
+    <Compile Include="GestionarProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GestionarProducto.Designer.cs">
-      <DependentUpon>GestionarProducto.cs</DependentUpon>
+    <Compile Include="GestionarProductos.Designer.cs">
+      <DependentUpon>GestionarProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="GestionarProvedor.cs">
+    <Compile Include="GestionarProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GestionarProvedor.Designer.cs">
-      <DependentUpon>GestionarProvedor.cs</DependentUpon>
+    <Compile Include="GestionarProveedores.Designer.cs">
+      <DependentUpon>GestionarProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="Ingresar Stock de Mercaderia.cs">
       <SubType>Form</SubType>
@@ -97,14 +97,24 @@
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="TrabajoDeCampoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrabajoDeCampoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TrabajoDeCampoDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrabajoDeCampoDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="control de stock.resx">
       <DependentUpon>control de stock.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GestionarProducto.resx">
-      <DependentUpon>GestionarProducto.cs</DependentUpon>
+    <EmbeddedResource Include="GestionarProductos.resx">
+      <DependentUpon>GestionarProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GestionarProvedor.resx">
-      <DependentUpon>GestionarProvedor.cs</DependentUpon>
+    <EmbeddedResource Include="GestionarProveedores.resx">
+      <DependentUpon>GestionarProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ingresar Stock de Mercaderia.resx">
       <DependentUpon>Ingresar Stock de Mercaderia.cs</DependentUpon>
@@ -140,6 +150,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="TrabajoDeCampoDataSet.xsc">
+      <DependentUpon>TrabajoDeCampoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TrabajoDeCampoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrabajoDeCampoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TrabajoDeCampoDataSet.xss">
+      <DependentUpon>TrabajoDeCampoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TrabajoDeCampoDataSet1.xsc">
+      <DependentUpon>TrabajoDeCampoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TrabajoDeCampoDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrabajoDeCampoDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TrabajoDeCampoDataSet1.xss">
+      <DependentUpon>TrabajoDeCampoDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -151,9 +183,9 @@
     <None Include="Resources\clouds-bubble-pop-art-y8iuv5agjzzczq9v.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Modelo\Modelo.csproj">
-      <Project>{4dc8cab8-23f7-454e-9355-4d62de27db18}</Project>
-      <Name>Modelo</Name>
+    <ProjectReference Include="..\Controladora\Controladora.csproj">
+      <Project>{56c1c27b-669f-455f-9daa-967a66ae634b}</Project>
+      <Name>Controladora</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

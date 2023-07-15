@@ -9,8 +9,6 @@ D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de 
 D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\Vista.csproj.AssemblyReference.cache
 D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\Vista.csproj.SuggestedBindingRedirects.cache
 D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo_de_campo_1.control_de_stock.resources
-D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo_de_campo_1.GestionarProducto.resources
-D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo_de_campo_1.GestionarProvedor.resources
 D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo_de_campo_1.Ingresar_Stock_de_Mercaderia.resources
 D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo_de_campo_1.FormLogin.resources
 D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo_de_campo_1.PantallaPrincipal.resources
@@ -22,3 +20,5 @@ D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de 
 D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\Vista.csproj.CopyComplete
 D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo de campo 1.exe
 D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo de campo 1.pdb
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo_de_campo_1.GestionarProductos.resources
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo_de_campo_1.GestionarProveedores.resources
