@@ -112,6 +112,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TrabajoDeCampoDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TrabajoDeCampoDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrabajoDeCampoDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TrabajoDeCampoDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrabajoDeCampoDataSet4.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="control de stock.resx">
       <DependentUpon>control de stock.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,6 +197,28 @@
     </None>
     <None Include="TrabajoDeCampoDataSet2.xss">
       <DependentUpon>TrabajoDeCampoDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="TrabajoDeCampoDataSet3.xsc">
+      <DependentUpon>TrabajoDeCampoDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="TrabajoDeCampoDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrabajoDeCampoDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TrabajoDeCampoDataSet3.xss">
+      <DependentUpon>TrabajoDeCampoDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="TrabajoDeCampoDataSet4.xsc">
+      <DependentUpon>TrabajoDeCampoDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="TrabajoDeCampoDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrabajoDeCampoDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TrabajoDeCampoDataSet4.xss">
+      <DependentUpon>TrabajoDeCampoDataSet4.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

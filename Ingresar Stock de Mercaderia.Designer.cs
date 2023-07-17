@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtStockActual = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtNombreProduc = new System.Windows.Forms.TextBox();
@@ -37,17 +38,28 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtPrecioActual = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPrecioActualizado = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCantidadIngreso = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dtpVencimiento = new System.Windows.Forms.DateTimePicker();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.trabajoDeCampoDataSet4 = new trabajo_de_campo_1.TrabajoDeCampoDataSet4();
+            this.productosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productosTableAdapter = new trabajo_de_campo_1.TrabajoDeCampoDataSet4TableAdapters.ProductosTableAdapter();
+            this.Cod_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nomb_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trabajoDeCampoDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtStockActual
@@ -146,14 +158,14 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "Precio Actual";
             // 
-            // textBox1
+            // txtPrecioActualizado
             // 
-            this.textBox1.Location = new System.Drawing.Point(386, 68);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 25);
-            this.textBox1.TabIndex = 18;
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.txtPrecioActualizado.Location = new System.Drawing.Point(386, 68);
+            this.txtPrecioActualizado.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtPrecioActualizado.Name = "txtPrecioActualizado";
+            this.txtPrecioActualizado.Size = new System.Drawing.Size(121, 25);
+            this.txtPrecioActualizado.TabIndex = 18;
+            this.txtPrecioActualizado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label5
             // 
@@ -165,14 +177,14 @@
             this.label5.TabIndex = 17;
             this.label5.Text = "Precio Actualizado";
             // 
-            // textBox2
+            // txtCantidadIngreso
             // 
-            this.textBox2.Location = new System.Drawing.Point(386, 26);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 25);
-            this.textBox2.TabIndex = 16;
-            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            this.txtCantidadIngreso.Location = new System.Drawing.Point(386, 26);
+            this.txtCantidadIngreso.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtCantidadIngreso.Name = "txtCantidadIngreso";
+            this.txtCantidadIngreso.Size = new System.Drawing.Size(121, 25);
+            this.txtCantidadIngreso.TabIndex = 16;
+            this.txtCantidadIngreso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // label6
             // 
@@ -189,8 +201,8 @@
             this.groupBox2.BackColor = System.Drawing.Color.Cornsilk;
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.dtpVencimiento);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txtCantidadIngreso);
+            this.groupBox2.Controls.Add(this.txtPrecioActualizado);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Location = new System.Drawing.Point(18, 255);
@@ -223,18 +235,19 @@
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.Cornsilk;
-            this.btnGuardar.Location = new System.Drawing.Point(664, 257);
+            this.btnGuardar.Location = new System.Drawing.Point(733, 311);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(377, 66);
             this.btnGuardar.TabIndex = 20;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.Cornsilk;
-            this.btnBack.Location = new System.Drawing.Point(664, 342);
+            this.btnBack.Location = new System.Drawing.Point(733, 383);
             this.btnBack.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(377, 62);
@@ -243,12 +256,77 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // dgvProductos
+            // 
+            this.dgvProductos.AutoGenerateColumns = false;
+            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Cod_Producto,
+            this.Nomb_Producto,
+            this.Precio,
+            this.Stock});
+            this.dgvProductos.DataSource = this.productosBindingSource;
+            this.dgvProductos.Location = new System.Drawing.Point(572, 33);
+            this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.RowHeadersWidth = 51;
+            this.dgvProductos.RowTemplate.Height = 27;
+            this.dgvProductos.Size = new System.Drawing.Size(538, 272);
+            this.dgvProductos.TabIndex = 22;
+            this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
+            // 
+            // trabajoDeCampoDataSet4
+            // 
+            this.trabajoDeCampoDataSet4.DataSetName = "TrabajoDeCampoDataSet4";
+            this.trabajoDeCampoDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productosBindingSource
+            // 
+            this.productosBindingSource.DataMember = "Productos";
+            this.productosBindingSource.DataSource = this.trabajoDeCampoDataSet4;
+            // 
+            // productosTableAdapter
+            // 
+            this.productosTableAdapter.ClearBeforeFill = true;
+            // 
+            // Cod_Producto
+            // 
+            this.Cod_Producto.DataPropertyName = "Cod_Producto";
+            this.Cod_Producto.HeaderText = "Cod_Producto";
+            this.Cod_Producto.MinimumWidth = 6;
+            this.Cod_Producto.Name = "Cod_Producto";
+            this.Cod_Producto.Width = 125;
+            // 
+            // Nomb_Producto
+            // 
+            this.Nomb_Producto.DataPropertyName = "Nomb_Producto";
+            this.Nomb_Producto.HeaderText = "Nomb_Producto";
+            this.Nomb_Producto.MinimumWidth = 6;
+            this.Nomb_Producto.Name = "Nomb_Producto";
+            this.Nomb_Producto.Width = 125;
+            // 
+            // Precio
+            // 
+            this.Precio.DataPropertyName = "Precio";
+            this.Precio.HeaderText = "Precio";
+            this.Precio.MinimumWidth = 6;
+            this.Precio.Name = "Precio";
+            this.Precio.Width = 125;
+            // 
+            // Stock
+            // 
+            this.Stock.DataPropertyName = "Stock";
+            this.Stock.HeaderText = "Stock";
+            this.Stock.MinimumWidth = 6;
+            this.Stock.Name = "Stock";
+            this.Stock.Width = 125;
+            // 
             // Ingresar_Stock_de_Mercaderia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::trabajo_de_campo_1.Properties.Resources.clouds_bubble_pop_art_y8iuv5agjzzczq9v;
             this.ClientSize = new System.Drawing.Size(1146, 469);
+            this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.groupBox2);
@@ -263,6 +341,9 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trabajoDeCampoDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -278,14 +359,22 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtPrecioActual;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPrecioActualizado;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCantidadIngreso;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dtpVencimiento;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.DataGridView dgvProductos;
+        private TrabajoDeCampoDataSet4 trabajoDeCampoDataSet4;
+        private System.Windows.Forms.BindingSource productosBindingSource;
+        private TrabajoDeCampoDataSet4TableAdapters.ProductosTableAdapter productosTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cod_Producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nomb_Producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
     }
 }

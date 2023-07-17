@@ -28,20 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtCodigoProduc = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombreProduc = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtStockActual = new System.Windows.Forms.TextBox();
             this.btnIngresarStock = new System.Windows.Forms.Button();
-            this.FechaVencimiento = new System.Windows.Forms.ListBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.txtPrecioActual = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.trabajoDeCampoDataSet3 = new trabajo_de_campo_1.TrabajoDeCampoDataSet3();
+            this.productosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productosTableAdapter = new trabajo_de_campo_1.TrabajoDeCampoDataSet3TableAdapters.ProductosTableAdapter();
+            this.Cod_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nomb_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioActual = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StockActual = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trabajoDeCampoDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBuscar
@@ -55,6 +66,7 @@
             this.btnBuscar.TabIndex = 0;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtCodigoProduc
             // 
@@ -112,14 +124,14 @@
             this.label3.Text = "Stock Actual";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox2
+            // txtStockActual
             // 
-            this.textBox2.Location = new System.Drawing.Point(256, 70);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(148, 25);
-            this.textBox2.TabIndex = 6;
+            this.txtStockActual.Location = new System.Drawing.Point(256, 70);
+            this.txtStockActual.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.txtStockActual.Name = "txtStockActual";
+            this.txtStockActual.ReadOnly = true;
+            this.txtStockActual.Size = new System.Drawing.Size(148, 25);
+            this.txtStockActual.TabIndex = 6;
             // 
             // btnIngresarStock
             // 
@@ -133,18 +145,6 @@
             this.btnIngresarStock.Text = "Ingresar Nueva Stock de Mercaderia";
             this.btnIngresarStock.UseVisualStyleBackColor = false;
             this.btnIngresarStock.Click += new System.EventHandler(this.btnIngresarStock_Click);
-            // 
-            // FechaVencimiento
-            // 
-            this.FechaVencimiento.BackColor = System.Drawing.Color.Cornsilk;
-            this.FechaVencimiento.FormattingEnabled = true;
-            this.FechaVencimiento.ItemHeight = 16;
-            this.FechaVencimiento.Location = new System.Drawing.Point(13, 157);
-            this.FechaVencimiento.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.FechaVencimiento.Name = "FechaVencimiento";
-            this.FechaVencimiento.Size = new System.Drawing.Size(612, 100);
-            this.FechaVencimiento.TabIndex = 8;
-            this.FechaVencimiento.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // btnBack
             // 
@@ -183,19 +183,83 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Cornsilk;
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.dgvProductos);
+            this.groupBox1.Controls.Add(this.txtStockActual);
             this.groupBox1.Controls.Add(this.txtPrecioActual);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txtNombreProduc);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.FechaVencimiento);
             this.groupBox1.Location = new System.Drawing.Point(52, 83);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(669, 271);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Producto";
+            // 
+            // dgvProductos
+            // 
+            this.dgvProductos.AutoGenerateColumns = false;
+            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Cod_Producto,
+            this.Nomb_Producto,
+            this.PrecioActual,
+            this.StockActual});
+            this.dgvProductos.DataSource = this.productosBindingSource;
+            this.dgvProductos.Location = new System.Drawing.Point(6, 139);
+            this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.RowHeadersWidth = 51;
+            this.dgvProductos.RowTemplate.Height = 27;
+            this.dgvProductos.Size = new System.Drawing.Size(657, 126);
+            this.dgvProductos.TabIndex = 12;
+            this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
+            // 
+            // trabajoDeCampoDataSet3
+            // 
+            this.trabajoDeCampoDataSet3.DataSetName = "TrabajoDeCampoDataSet3";
+            this.trabajoDeCampoDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productosBindingSource
+            // 
+            this.productosBindingSource.DataMember = "Productos";
+            this.productosBindingSource.DataSource = this.trabajoDeCampoDataSet3;
+            // 
+            // productosTableAdapter
+            // 
+            this.productosTableAdapter.ClearBeforeFill = true;
+            // 
+            // Cod_Producto
+            // 
+            this.Cod_Producto.DataPropertyName = "Cod_Producto";
+            this.Cod_Producto.HeaderText = "Cod_Producto";
+            this.Cod_Producto.MinimumWidth = 6;
+            this.Cod_Producto.Name = "Cod_Producto";
+            this.Cod_Producto.Width = 150;
+            // 
+            // Nomb_Producto
+            // 
+            this.Nomb_Producto.DataPropertyName = "Nomb_Producto";
+            this.Nomb_Producto.HeaderText = "Nomb_Producto";
+            this.Nomb_Producto.MinimumWidth = 6;
+            this.Nomb_Producto.Name = "Nomb_Producto";
+            this.Nomb_Producto.Width = 150;
+            // 
+            // PrecioActual
+            // 
+            this.PrecioActual.DataPropertyName = "Precio";
+            this.PrecioActual.HeaderText = "Precio";
+            this.PrecioActual.MinimumWidth = 6;
+            this.PrecioActual.Name = "PrecioActual";
+            this.PrecioActual.Width = 150;
+            // 
+            // StockActual
+            // 
+            this.StockActual.DataPropertyName = "Stock";
+            this.StockActual.HeaderText = "Stock";
+            this.StockActual.MinimumWidth = 6;
+            this.StockActual.Name = "StockActual";
+            this.StockActual.Width = 150;
             // 
             // control_de_stock
             // 
@@ -218,6 +282,9 @@
             this.Load += new System.EventHandler(this.control_de_stock_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trabajoDeCampoDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,12 +298,19 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNombreProduc;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtStockActual;
         private System.Windows.Forms.Button btnIngresarStock;
-        private System.Windows.Forms.ListBox FechaVencimiento;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.TextBox txtPrecioActual;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView dgvProductos;
+        private TrabajoDeCampoDataSet3 trabajoDeCampoDataSet3;
+        private System.Windows.Forms.BindingSource productosBindingSource;
+        private TrabajoDeCampoDataSet3TableAdapters.ProductosTableAdapter productosTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cod_Producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nomb_Producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioActual;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StockActual;
     }
 }

@@ -40,15 +40,14 @@ namespace trabajo_de_campo_1
         {
             if (string.IsNullOrEmpty(txtCodProducto.Text) ||
                  string.IsNullOrEmpty(txtNombProducto.Text) ||
-                 string.IsNullOrEmpty(txtPrecioProducto.Text) ||
-                  string.IsNullOrEmpty(txtStockProducto.Text)
+                 string.IsNullOrEmpty(txtPrecioProducto.Text)
                  )
             {
                 MessageBox.Show("Por favor, completa todos los datos.");
             }
             else
             {       Controladora.ControlGestionarProductos AgregarProduxcto = new Controladora.ControlGestionarProductos();
-                   if (AgregarProduxcto.PasarProducto(txtCodProducto.Text, txtNombProducto.Text,txtPrecioProducto.Text, txtStockProducto.Text)==false)
+                   if (AgregarProduxcto.PasarProducto(txtCodProducto.Text, txtNombProducto.Text,txtPrecioProducto.Text)==false)
                     {
                         MessageBox.Show("el producto ya existe");
                     }
@@ -73,12 +72,10 @@ namespace trabajo_de_campo_1
             string CodigoProducto =dgvProductos.Rows[indiceFila].Cells["Cod_Producto"].Value.ToString();
             string NombreProducto = dgvProductos.Rows[indiceFila].Cells["Nomb_Producto"].Value.ToString();
                  string PrecioProducto = dgvProductos.Rows[indiceFila].Cells["Precio"].Value.ToString();
-            string StockProducto = dgvProductos.Rows[indiceFila].Cells["Stock"].Value.ToString();
             // Llenar los TextBox con los valores obtenidos
             txtCodProducto.Text = CodigoProducto;
                 txtNombProducto.Text = NombreProducto;
                 txtPrecioProducto.Text = PrecioProducto;
-                txtStockProducto.Text = StockProducto;
         }
 
         private void GestionarProducto_Click(object sender, EventArgs e)
