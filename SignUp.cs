@@ -181,5 +181,24 @@ namespace trabajo_de_campo_1
         {
             VolverALogin();
         }
+
+        private void txtID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '-')
+            {
+                e.Handled = true; // Cancelar el evento del teclado
+            }
+
+            // Permitir el signo de menos solo en la primera posición
+            if (e.KeyChar == '-' && (sender as TextBox).Text.IndexOf('-') >= 0)
+            {
+                e.Handled = true; // Cancelar el evento del teclado
+            }
+        }
+
+        private void SignUp_Load(object sender, EventArgs e)
+        {
+            CenterToScreen();
+        }
     }
 }

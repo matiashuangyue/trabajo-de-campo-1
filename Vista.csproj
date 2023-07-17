@@ -107,6 +107,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TrabajoDeCampoDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TrabajoDeCampoDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrabajoDeCampoDataSet2.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="control de stock.resx">
       <DependentUpon>control de stock.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,6 +176,17 @@
     </None>
     <None Include="TrabajoDeCampoDataSet1.xss">
       <DependentUpon>TrabajoDeCampoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TrabajoDeCampoDataSet2.xsc">
+      <DependentUpon>TrabajoDeCampoDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="TrabajoDeCampoDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrabajoDeCampoDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TrabajoDeCampoDataSet2.xss">
+      <DependentUpon>TrabajoDeCampoDataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

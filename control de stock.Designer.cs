@@ -63,6 +63,7 @@
             this.txtCodigoProduc.Name = "txtCodigoProduc";
             this.txtCodigoProduc.Size = new System.Drawing.Size(148, 25);
             this.txtCodigoProduc.TabIndex = 1;
+            this.txtCodigoProduc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigoProduc_KeyPress);
             // 
             // label1
             // 
@@ -94,6 +95,7 @@
             this.txtNombreProduc.Location = new System.Drawing.Point(256, 23);
             this.txtNombreProduc.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.txtNombreProduc.Name = "txtNombreProduc";
+            this.txtNombreProduc.ReadOnly = true;
             this.txtNombreProduc.Size = new System.Drawing.Size(148, 25);
             this.txtNombreProduc.TabIndex = 4;
             // 
@@ -115,6 +117,7 @@
             this.textBox2.Location = new System.Drawing.Point(256, 70);
             this.textBox2.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(148, 25);
             this.textBox2.TabIndex = 6;
             // 
@@ -161,6 +164,7 @@
             this.txtPrecioActual.Location = new System.Drawing.Point(256, 109);
             this.txtPrecioActual.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.txtPrecioActual.Name = "txtPrecioActual";
+            this.txtPrecioActual.ReadOnly = true;
             this.txtPrecioActual.Size = new System.Drawing.Size(148, 25);
             this.txtPrecioActual.TabIndex = 11;
             // 

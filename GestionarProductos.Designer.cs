@@ -37,6 +37,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.Cod_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nomb_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.trabajoDeCampoDataSet = new trabajo_de_campo_1.TrabajoDeCampoDataSet();
             this.productosTableAdapter = new trabajo_de_campo_1.TrabajoDeCampoDataSetTableAdapters.ProductosTableAdapter();
@@ -44,10 +48,6 @@
             this.txtStockProducto = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAgregarProducto = new System.Windows.Forms.Button();
-            this.Cod_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nomb_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trabajoDeCampoDataSet)).BeginInit();
@@ -61,6 +61,7 @@
             this.txtCodProducto.Name = "txtCodProducto";
             this.txtCodProducto.Size = new System.Drawing.Size(227, 25);
             this.txtCodProducto.TabIndex = 0;
+            this.txtCodProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodProducto_KeyPress);
             // 
             // txtPrecioProducto
             // 
@@ -69,6 +70,7 @@
             this.txtPrecioProducto.Name = "txtPrecioProducto";
             this.txtPrecioProducto.Size = new System.Drawing.Size(227, 25);
             this.txtPrecioProducto.TabIndex = 1;
+            this.txtPrecioProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioProducto_KeyPress);
             // 
             // txtNombProducto
             // 
@@ -142,68 +144,6 @@
             this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
             this.dgvProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellContentClick_1);
             // 
-            // productosBindingSource
-            // 
-            this.productosBindingSource.DataMember = "Productos";
-            this.productosBindingSource.DataSource = this.trabajoDeCampoDataSet;
-            // 
-            // trabajoDeCampoDataSet
-            // 
-            this.trabajoDeCampoDataSet.DataSetName = "TrabajoDeCampoDataSet";
-            this.trabajoDeCampoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productosTableAdapter
-            // 
-            this.productosTableAdapter.ClearBeforeFill = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Cornsilk;
-            this.label4.Location = new System.Drawing.Point(12, 209);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 16);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Stock : ";
-            // 
-            // txtStockProducto
-            // 
-            this.txtStockProducto.Location = new System.Drawing.Point(243, 209);
-            this.txtStockProducto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtStockProducto.Name = "txtStockProducto";
-            this.txtStockProducto.Size = new System.Drawing.Size(227, 25);
-            this.txtStockProducto.TabIndex = 9;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtStockProducto);
-            this.groupBox1.Controls.Add(this.txtCodProducto);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtPrecioProducto);
-            this.groupBox1.Controls.Add(this.txtNombProducto);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(725, 27);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(478, 264);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos de Productos";
-            // 
-            // btnAgregarProducto
-            // 
-            this.btnAgregarProducto.BackColor = System.Drawing.Color.Cornsilk;
-            this.btnAgregarProducto.Location = new System.Drawing.Point(719, 378);
-            this.btnAgregarProducto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnAgregarProducto.Name = "btnAgregarProducto";
-            this.btnAgregarProducto.Size = new System.Drawing.Size(222, 77);
-            this.btnAgregarProducto.TabIndex = 11;
-            this.btnAgregarProducto.Text = "Agregar Producto";
-            this.btnAgregarProducto.UseVisualStyleBackColor = false;
-            this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
-            // 
             // Cod_Producto
             // 
             this.Cod_Producto.DataPropertyName = "Cod_Producto";
@@ -236,7 +176,70 @@
             this.Stock.Name = "Stock";
             this.Stock.Width = 125;
             // 
-            // GestionarProducto
+            // productosBindingSource
+            // 
+            this.productosBindingSource.DataMember = "Productos";
+            this.productosBindingSource.DataSource = this.trabajoDeCampoDataSet;
+            // 
+            // trabajoDeCampoDataSet
+            // 
+            this.trabajoDeCampoDataSet.DataSetName = "TrabajoDeCampoDataSet";
+            this.trabajoDeCampoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productosTableAdapter
+            // 
+            this.productosTableAdapter.ClearBeforeFill = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Cornsilk;
+            this.label4.Location = new System.Drawing.Point(12, 209);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 16);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Stock : ";
+            // 
+            // txtStockProducto
+            // 
+            this.txtStockProducto.Location = new System.Drawing.Point(243, 209);
+            this.txtStockProducto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtStockProducto.Name = "txtStockProducto";
+            this.txtStockProducto.Size = new System.Drawing.Size(227, 25);
+            this.txtStockProducto.TabIndex = 9;
+            this.txtStockProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStockProducto_KeyPress);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.txtStockProducto);
+            this.groupBox1.Controls.Add(this.txtCodProducto);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.txtPrecioProducto);
+            this.groupBox1.Controls.Add(this.txtNombProducto);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Location = new System.Drawing.Point(725, 27);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(478, 264);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Datos de Productos";
+            // 
+            // btnAgregarProducto
+            // 
+            this.btnAgregarProducto.BackColor = System.Drawing.Color.Cornsilk;
+            this.btnAgregarProducto.Location = new System.Drawing.Point(719, 378);
+            this.btnAgregarProducto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnAgregarProducto.Name = "btnAgregarProducto";
+            this.btnAgregarProducto.Size = new System.Drawing.Size(222, 77);
+            this.btnAgregarProducto.TabIndex = 11;
+            this.btnAgregarProducto.Text = "Agregar Producto";
+            this.btnAgregarProducto.UseVisualStyleBackColor = false;
+            this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
+            // 
+            // GestionarProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -249,7 +252,7 @@
             this.Font = new System.Drawing.Font("Headline R", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Name = "GestionarProducto";
+            this.Name = "GestionarProductos";
             this.Text = "GestionarProducto";
             this.Load += new System.EventHandler(this.GestionarProducto_Load);
             this.Click += new System.EventHandler(this.GestionarProducto_Click);

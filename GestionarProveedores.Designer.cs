@@ -45,29 +45,29 @@
             this.trabajoDeCampoDataSet = new trabajo_de_campo_1.TrabajoDeCampoDataSet();
             this.trabajoDeCampoDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvProveedores = new System.Windows.Forms.DataGridView();
-            this.trabajoDeCampoDataSet1 = new trabajo_de_campo_1.TrabajoDeCampoDataSet1();
-            this.proveedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.proveedoresTableAdapter = new trabajo_de_campo_1.TrabajoDeCampoDataSet1TableAdapters.ProveedoresTableAdapter();
             this.ID_Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nomb_Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Mail_Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direc_Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proveedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.trabajoDeCampoDataSet1 = new trabajo_de_campo_1.TrabajoDeCampoDataSet1();
+            this.proveedoresTableAdapter = new trabajo_de_campo_1.TrabajoDeCampoDataSet1TableAdapters.ProveedoresTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trabajoDeCampoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trabajoDeCampoDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trabajoDeCampoDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trabajoDeCampoDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.Cornsilk;
-            this.btnBack.Location = new System.Drawing.Point(807, 323);
+            this.btnBack.Location = new System.Drawing.Point(794, 268);
             this.btnBack.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(240, 47);
+            this.btnBack.Size = new System.Drawing.Size(253, 102);
             this.btnBack.TabIndex = 0;
             this.btnBack.Text = "Volver A Pantalla Principal";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -79,6 +79,7 @@
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(222, 25);
             this.txtDNI.TabIndex = 1;
+            this.txtDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDNI_KeyPress);
             // 
             // groupBox1
             // 
@@ -98,7 +99,7 @@
             this.groupBox1.Size = new System.Drawing.Size(722, 221);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Datos de Proveedor";
             // 
             // btnAgregarProveedor
             // 
@@ -159,15 +160,17 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(222, 25);
             this.txtTelefono.TabIndex = 5;
+            this.txtTelefono.TextChanged += new System.EventHandler(this.txtTelefono_TextChanged);
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(23, 44);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 16);
+            this.label2.Size = new System.Drawing.Size(185, 16);
             this.label2.TabIndex = 4;
-            this.label2.Text = "ID De Proveedor";
+            this.label2.Text = "DNI De Proveedor";
             // 
             // txtNomb
             // 
@@ -214,20 +217,6 @@
             this.dgvProveedores.TabIndex = 3;
             this.dgvProveedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedores_CellClick);
             // 
-            // trabajoDeCampoDataSet1
-            // 
-            this.trabajoDeCampoDataSet1.DataSetName = "TrabajoDeCampoDataSet1";
-            this.trabajoDeCampoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // proveedoresBindingSource
-            // 
-            this.proveedoresBindingSource.DataMember = "Proveedores";
-            this.proveedoresBindingSource.DataSource = this.trabajoDeCampoDataSet1;
-            // 
-            // proveedoresTableAdapter
-            // 
-            this.proveedoresTableAdapter.ClearBeforeFill = true;
-            // 
             // ID_Proveedor
             // 
             this.ID_Proveedor.DataPropertyName = "ID_Proveedor";
@@ -268,6 +257,20 @@
             this.Direc_Proveedor.Name = "Direc_Proveedor";
             this.Direc_Proveedor.Width = 150;
             // 
+            // proveedoresBindingSource
+            // 
+            this.proveedoresBindingSource.DataMember = "Proveedores";
+            this.proveedoresBindingSource.DataSource = this.trabajoDeCampoDataSet1;
+            // 
+            // trabajoDeCampoDataSet1
+            // 
+            this.trabajoDeCampoDataSet1.DataSetName = "TrabajoDeCampoDataSet1";
+            this.trabajoDeCampoDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // proveedoresTableAdapter
+            // 
+            this.proveedoresTableAdapter.ClearBeforeFill = true;
+            // 
             // GestionarProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 16F);
@@ -288,8 +291,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.trabajoDeCampoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trabajoDeCampoDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trabajoDeCampoDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proveedoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trabajoDeCampoDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }

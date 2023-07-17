@@ -55,6 +55,7 @@
             this.txtStockActual.Location = new System.Drawing.Point(297, 135);
             this.txtStockActual.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtStockActual.Name = "txtStockActual";
+            this.txtStockActual.ReadOnly = true;
             this.txtStockActual.Size = new System.Drawing.Size(148, 25);
             this.txtStockActual.TabIndex = 12;
             // 
@@ -73,6 +74,7 @@
             this.txtNombreProduc.Location = new System.Drawing.Point(297, 89);
             this.txtNombreProduc.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNombreProduc.Name = "txtNombreProduc";
+            this.txtNombreProduc.ReadOnly = true;
             this.txtNombreProduc.Size = new System.Drawing.Size(148, 25);
             this.txtNombreProduc.TabIndex = 10;
             // 
@@ -101,6 +103,7 @@
             this.txtCodigoProduc.Location = new System.Drawing.Point(297, 43);
             this.txtCodigoProduc.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtCodigoProduc.Name = "txtCodigoProduc";
+            this.txtCodigoProduc.ReadOnly = true;
             this.txtCodigoProduc.Size = new System.Drawing.Size(148, 25);
             this.txtCodigoProduc.TabIndex = 7;
             // 
@@ -129,6 +132,7 @@
             this.txtPrecioActual.Location = new System.Drawing.Point(297, 178);
             this.txtPrecioActual.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtPrecioActual.Name = "txtPrecioActual";
+            this.txtPrecioActual.ReadOnly = true;
             this.txtPrecioActual.Size = new System.Drawing.Size(148, 25);
             this.txtPrecioActual.TabIndex = 14;
             // 
@@ -149,6 +153,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(121, 25);
             this.textBox1.TabIndex = 18;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label5
             // 
@@ -167,6 +172,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(121, 25);
             this.textBox2.TabIndex = 16;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // label6
             // 

@@ -129,6 +129,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "PantallaPrincipal";
             this.Text = "PantallaPrincipal";
+            this.Load += new System.EventHandler(this.PantallaPrincipal_Load);
             this.ResumeLayout(false);
 
         }

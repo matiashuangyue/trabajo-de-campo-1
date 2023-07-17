@@ -72,6 +72,9 @@ namespace trabajo_de_campo_1
             VolverAPaginaAnterior();
         }
 
-        
+        private void PantallaPrincipal_Load(object sender, EventArgs e)
+        {
+            CenterToScreen();
+        }
     }
 }

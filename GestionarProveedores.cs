@@ -28,7 +28,7 @@ namespace trabajo_de_campo_1
         {
             // TODO: esta línea de código carga datos en la tabla 'trabajoDeCampoDataSet1.Proveedores' Puede moverla o quitarla según sea necesario.
             this.proveedoresTableAdapter.Fill(this.trabajoDeCampoDataSet1.Proveedores);
-
+            CenterToScreen();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -78,6 +78,39 @@ namespace trabajo_de_campo_1
             txtTelefono.Text = Telefono;
             txtMail.Text = Mail;
             txtDirec.Text = Direccion;
+        }
+
+        private void txtDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '-')
+            {
+                e.Handled = true; // Cancelar el evento del teclado
+            }
+
+            // Permitir el signo de menos solo en la primera posición
+            if (e.KeyChar == '-' && (sender as TextBox).Text.IndexOf('-') >= 0)
+            {
+                e.Handled = true; // Cancelar el evento del teclado
+            }
+        }
+
+        private void txtTelefono_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '-')
+            {
+                e.Handled = true; // Cancelar el evento del teclado
+            }
+
+            // Permitir el signo de menos solo en la primera posición
+            if (e.KeyChar == '-' && (sender as TextBox).Text.IndexOf('-') >= 0)
+            {
+                e.Handled = true; // Cancelar el evento del teclado
+            }
         }
     }
 }

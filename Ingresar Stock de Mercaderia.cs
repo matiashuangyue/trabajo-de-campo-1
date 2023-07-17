@@ -31,7 +31,35 @@ namespace trabajo_de_campo_1
 
         private void Ingresar_Stock_de_Mercaderia_Load(object sender, EventArgs e)
         {
-            
+            CenterToScreen();
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '-')
+            {
+                e.Handled = true; // Cancelar el evento del teclado
+            }
+
+            // Permitir el signo de menos solo en la primera posición
+            if (e.KeyChar == '-' && (sender as TextBox).Text.IndexOf('-') >= 0)
+            {
+                e.Handled = true; // Cancelar el evento del teclado
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '-')
+            {
+                e.Handled = true; // Cancelar el evento del teclado
+            }
+
+            // Permitir el signo de menos solo en la primera posición
+            if (e.KeyChar == '-' && (sender as TextBox).Text.IndexOf('-') >= 0)
+            {
+                e.Handled = true; // Cancelar el evento del teclado
+            }
         }
     }
 }
