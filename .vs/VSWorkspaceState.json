@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Properties",
+    "\\Resources"
   ],
-  "SelectedNode": "\\GestionarProductos.cs",
+  "SelectedNode": "\\SignUp.cs",
   "PreviewInSolutionExplorer": false
 }

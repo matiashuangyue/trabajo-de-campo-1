@@ -79,5 +79,41 @@ namespace trabajo_de_campo_1.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;&lt;!-- un formato de html que nos permite convertir a PDF--&gt;
+        ///&lt;html&gt;
+        ///&lt;head&gt;
+        ///	&lt;title&gt;Web Page Design&lt;/title&gt;
+        ///	&lt;style&gt;
+        ///		table.border {
+        ///			border-collapse: collapse;
+        ///		}
+        ///
+        ///			table.border th {
+        ///				padding: 5px;
+        ///				border: 1px solid black;
+        ///			}
+        ///
+        ///			table.border td {
+        ///				padding: 5px;
+        ///				border: 1px solid black;
+        ///			}
+        ///	&lt;/style&gt;
+        ///&lt;/head&gt;
+        ///&lt;body&gt;
+        ///	&lt;table style=&quot;width:100%&quot;&gt;
+        ///
+        ///		&lt;tr&gt;
+        ///			&lt;td style=&quot;width:20%&quot;&gt;&lt;/td&gt;
+        ///			&lt;td style=&quot;width:60%&quot; align=&quot;center&quot;&gt;
+        ///				&lt;table&gt;
+        ///					&lt;tr&gt;&lt;td align=&quot;center&quot;&gt;NAGAPARK &lt;/ [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string plantilla {
+            get {
+                return ResourceManager.GetString("plantilla", resourceCulture);
+            }
+        }
     }
 }

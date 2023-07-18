@@ -76,5 +76,12 @@ namespace trabajo_de_campo_1
         {
             CenterToScreen();
         }
+
+        private void btnSolicitarInforme_Click(object sender, EventArgs e)
+        {
+            InfoTablas infoTablas = new InfoTablas();
+            infoTablas.Show();
+            this.Hide();
+        }
     }
 }

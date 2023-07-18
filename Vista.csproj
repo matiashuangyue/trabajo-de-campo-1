@@ -33,9 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itextsharp.xmlworker.5.5.13\lib\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,6 +60,12 @@
     <Compile Include="control de stock.Designer.cs">
       <DependentUpon>control de stock.cs</DependentUpon>
     </Compile>
+    <Compile Include="DescargarPDF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DescargarPDF.Designer.cs">
+      <DependentUpon>DescargarPDF.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestionarProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +77,12 @@
     </Compile>
     <Compile Include="GestionarProveedores.Designer.cs">
       <DependentUpon>GestionarProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informe.Designer.cs">
+      <DependentUpon>Informe.cs</DependentUpon>
     </Compile>
     <Compile Include="Ingresar Stock de Mercaderia.cs">
       <SubType>Form</SubType>
@@ -107,6 +126,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TrabajoDeCampoDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TrabajoDeCampoDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrabajoDeCampoDataSet10.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TrabajoDeCampoDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -122,14 +146,45 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TrabajoDeCampoDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="TrabajoDeCampoDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrabajoDeCampoDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TrabajoDeCampoDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrabajoDeCampoDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TrabajoDeCampoDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrabajoDeCampoDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TrabajoDeCampoDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrabajoDeCampoDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TrabajoDeCampoDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrabajoDeCampoDataSet9.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="control de stock.resx">
       <DependentUpon>control de stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DescargarPDF.resx">
+      <DependentUpon>DescargarPDF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionarProductos.resx">
       <DependentUpon>GestionarProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionarProveedores.resx">
       <DependentUpon>GestionarProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informe.resx">
+      <DependentUpon>Informe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ingresar Stock de Mercaderia.resx">
       <DependentUpon>Ingresar Stock de Mercaderia.cs</DependentUpon>
@@ -156,6 +211,7 @@
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -186,6 +242,17 @@
     </None>
     <None Include="TrabajoDeCampoDataSet1.xss">
       <DependentUpon>TrabajoDeCampoDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TrabajoDeCampoDataSet10.xsc">
+      <DependentUpon>TrabajoDeCampoDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="TrabajoDeCampoDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrabajoDeCampoDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TrabajoDeCampoDataSet10.xss">
+      <DependentUpon>TrabajoDeCampoDataSet10.xsd</DependentUpon>
     </None>
     <None Include="TrabajoDeCampoDataSet2.xsc">
       <DependentUpon>TrabajoDeCampoDataSet2.xsd</DependentUpon>
@@ -220,6 +287,61 @@
     <None Include="TrabajoDeCampoDataSet4.xss">
       <DependentUpon>TrabajoDeCampoDataSet4.xsd</DependentUpon>
     </None>
+    <None Include="TrabajoDeCampoDataSet5.xsc">
+      <DependentUpon>TrabajoDeCampoDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="TrabajoDeCampoDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrabajoDeCampoDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TrabajoDeCampoDataSet5.xss">
+      <DependentUpon>TrabajoDeCampoDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="TrabajoDeCampoDataSet6.xsc">
+      <DependentUpon>TrabajoDeCampoDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="TrabajoDeCampoDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrabajoDeCampoDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TrabajoDeCampoDataSet6.xss">
+      <DependentUpon>TrabajoDeCampoDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="TrabajoDeCampoDataSet7.xsc">
+      <DependentUpon>TrabajoDeCampoDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="TrabajoDeCampoDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrabajoDeCampoDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TrabajoDeCampoDataSet7.xss">
+      <DependentUpon>TrabajoDeCampoDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="TrabajoDeCampoDataSet8.xsc">
+      <DependentUpon>TrabajoDeCampoDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="TrabajoDeCampoDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrabajoDeCampoDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TrabajoDeCampoDataSet8.xss">
+      <DependentUpon>TrabajoDeCampoDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="TrabajoDeCampoDataSet9.xsc">
+      <DependentUpon>TrabajoDeCampoDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="TrabajoDeCampoDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrabajoDeCampoDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TrabajoDeCampoDataSet9.xss">
+      <DependentUpon>TrabajoDeCampoDataSet9.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -235,6 +357,9 @@
       <Project>{56c1c27b-669f-455f-9daa-967a66ae634b}</Project>
       <Name>Controladora</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plantilla.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

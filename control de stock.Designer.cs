@@ -42,24 +42,24 @@
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.trabajoDeCampoDataSet3 = new trabajo_de_campo_1.TrabajoDeCampoDataSet3();
-            this.productosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productosTableAdapter = new trabajo_de_campo_1.TrabajoDeCampoDataSet3TableAdapters.ProductosTableAdapter();
             this.Cod_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nomb_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioActual = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StockActual = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.trabajoDeCampoDataSet3 = new trabajo_de_campo_1.TrabajoDeCampoDataSet3();
+            this.productosTableAdapter = new trabajo_de_campo_1.TrabajoDeCampoDataSet3TableAdapters.ProductosTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trabajoDeCampoDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trabajoDeCampoDataSet3)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.Cornsilk;
             this.btnBuscar.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscar.Location = new System.Drawing.Point(485, 18);
+            this.btnBuscar.Location = new System.Drawing.Point(593, 18);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(236, 46);
@@ -70,7 +70,7 @@
             // 
             // txtCodigoProduc
             // 
-            this.txtCodigoProduc.Location = new System.Drawing.Point(251, 30);
+            this.txtCodigoProduc.Location = new System.Drawing.Point(308, 30);
             this.txtCodigoProduc.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.txtCodigoProduc.Name = "txtCodigoProduc";
             this.txtCodigoProduc.Size = new System.Drawing.Size(148, 25);
@@ -80,9 +80,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.BackColor = System.Drawing.Color.Cornsilk;
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(14, 33);
+            this.label1.Location = new System.Drawing.Point(55, 33);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(209, 16);
@@ -140,7 +140,7 @@
             this.btnIngresarStock.Location = new System.Drawing.Point(52, 360);
             this.btnIngresarStock.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.btnIngresarStock.Name = "btnIngresarStock";
-            this.btnIngresarStock.Size = new System.Drawing.Size(365, 56);
+            this.btnIngresarStock.Size = new System.Drawing.Size(365, 84);
             this.btnIngresarStock.TabIndex = 7;
             this.btnIngresarStock.Text = "Ingresar Nueva Stock de Mercaderia";
             this.btnIngresarStock.UseVisualStyleBackColor = false;
@@ -153,7 +153,7 @@
             this.btnBack.Location = new System.Drawing.Point(464, 360);
             this.btnBack.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(365, 56);
+            this.btnBack.Size = new System.Drawing.Size(365, 84);
             this.btnBack.TabIndex = 9;
             this.btnBack.Text = "Volver A Pantalla Principal";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -192,7 +192,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(52, 83);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(669, 271);
+            this.groupBox1.Size = new System.Drawing.Size(777, 271);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Producto";
@@ -214,20 +214,6 @@
             this.dgvProductos.Size = new System.Drawing.Size(657, 126);
             this.dgvProductos.TabIndex = 12;
             this.dgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProductos_CellClick);
-            // 
-            // trabajoDeCampoDataSet3
-            // 
-            this.trabajoDeCampoDataSet3.DataSetName = "TrabajoDeCampoDataSet3";
-            this.trabajoDeCampoDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productosBindingSource
-            // 
-            this.productosBindingSource.DataMember = "Productos";
-            this.productosBindingSource.DataSource = this.trabajoDeCampoDataSet3;
-            // 
-            // productosTableAdapter
-            // 
-            this.productosTableAdapter.ClearBeforeFill = true;
             // 
             // Cod_Producto
             // 
@@ -261,12 +247,26 @@
             this.StockActual.Name = "StockActual";
             this.StockActual.Width = 150;
             // 
+            // productosBindingSource
+            // 
+            this.productosBindingSource.DataMember = "Productos";
+            this.productosBindingSource.DataSource = this.trabajoDeCampoDataSet3;
+            // 
+            // trabajoDeCampoDataSet3
+            // 
+            this.trabajoDeCampoDataSet3.DataSetName = "TrabajoDeCampoDataSet3";
+            this.trabajoDeCampoDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productosTableAdapter
+            // 
+            this.productosTableAdapter.ClearBeforeFill = true;
+            // 
             // control_de_stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::trabajo_de_campo_1.Properties.Resources.clouds_bubble_pop_art_y8iuv5agjzzczq9v;
-            this.ClientSize = new System.Drawing.Size(929, 451);
+            this.ClientSize = new System.Drawing.Size(1162, 473);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnIngresarStock);
@@ -283,8 +283,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trabajoDeCampoDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trabajoDeCampoDataSet3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

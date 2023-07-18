@@ -46,6 +46,7 @@
             this.productosTableAdapter = new trabajo_de_campo_1.TrabajoDeCampoDataSetTableAdapters.ProductosTableAdapter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAgregarProducto = new System.Windows.Forms.Button();
+            this.btnEliminarProducto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trabajoDeCampoDataSet)).BeginInit();
@@ -114,7 +115,7 @@
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.Cornsilk;
-            this.btnBack.Location = new System.Drawing.Point(725, 391);
+            this.btnBack.Location = new System.Drawing.Point(670, 391);
             this.btnBack.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(478, 77);
@@ -196,7 +197,7 @@
             this.groupBox1.Controls.Add(this.txtNombProducto);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(725, 27);
+            this.groupBox1.Location = new System.Drawing.Point(670, 13);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(478, 216);
             this.groupBox1.TabIndex = 10;
@@ -206,21 +207,34 @@
             // btnAgregarProducto
             // 
             this.btnAgregarProducto.BackColor = System.Drawing.Color.Cornsilk;
-            this.btnAgregarProducto.Location = new System.Drawing.Point(725, 269);
+            this.btnAgregarProducto.Location = new System.Drawing.Point(670, 269);
             this.btnAgregarProducto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
-            this.btnAgregarProducto.Size = new System.Drawing.Size(478, 103);
+            this.btnAgregarProducto.Size = new System.Drawing.Size(216, 116);
             this.btnAgregarProducto.TabIndex = 11;
             this.btnAgregarProducto.Text = "Agregar Producto";
             this.btnAgregarProducto.UseVisualStyleBackColor = false;
             this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
+            // 
+            // btnEliminarProducto
+            // 
+            this.btnEliminarProducto.BackColor = System.Drawing.Color.Cornsilk;
+            this.btnEliminarProducto.Location = new System.Drawing.Point(933, 269);
+            this.btnEliminarProducto.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnEliminarProducto.Name = "btnEliminarProducto";
+            this.btnEliminarProducto.Size = new System.Drawing.Size(215, 116);
+            this.btnEliminarProducto.TabIndex = 12;
+            this.btnEliminarProducto.Text = "Eliminar Producto";
+            this.btnEliminarProducto.UseVisualStyleBackColor = false;
+            this.btnEliminarProducto.Click += new System.EventHandler(this.btnEliminarProducto_Click);
             // 
             // GestionarProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::trabajo_de_campo_1.Properties.Resources.clouds_bubble_pop_art_y8iuv5agjzzczq9v;
-            this.ClientSize = new System.Drawing.Size(1221, 480);
+            this.ClientSize = new System.Drawing.Size(1162, 473);
+            this.Controls.Add(this.btnEliminarProducto);
             this.Controls.Add(this.btnAgregarProducto);
             this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.groupBox1);
@@ -260,5 +274,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nomb_Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
+        private System.Windows.Forms.Button btnEliminarProducto;
     }
 }

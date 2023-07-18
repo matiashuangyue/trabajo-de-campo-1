@@ -125,6 +125,56 @@ namespace trabajo_de_campo_1
                 e.Handled = true; // Cancelar el evento del teclado
             }
         }
+
+        private void btnEliminarProducto_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtCodProducto.Text) ||
+                string.IsNullOrEmpty(txtNombProducto.Text) ||
+                string.IsNullOrEmpty(txtPrecioProducto.Text)
+                )
+            {
+                MessageBox.Show("Por favor, completa todos los datos.");
+            }
+            else
+            {
+
+                Controladora.ControlGestionarProductos AgregarProducto = new Controladora.ControlGestionarProductos();
+                
+                if (AgregarProducto.ValidarID(txtCodProducto.Text) == true)
+                {
+                    MessageBox.Show("Producto ingresado no se encuentra en base de datos  ");//encontro producto
+                }
+                else
+                {
+                    DialogResult resultado = MessageBox.Show("¿Realmente deseas borrar producto?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (resultado == DialogResult.Yes)
+                    {
+                        if (AgregarProducto.EliminarProducto(txtCodProducto.Text))
+                        {
+                            MessageBox.Show("Producto eliminado con exito");
+                            this.productosTableAdapter.Fill(this.trabajoDeCampoDataSet.Productos);
+                            dgvProductos.Refresh();
+                        }
+                        else
+                        {
+                            MessageBox.Show("error en sql");
+                        }
+                        
+                        // Acciones a realizar cuando el usuario selecciona "Yes"
+                        // Por ejemplo, puedes ejecutar el código para eliminar un registro aquí.
+                        // ...
+                    }
+                    else
+                    {
+                        
+                        // Acciones a realizar cuando el usuario selecciona "No" o cierra el MessageBox
+                        // Por ejemplo, puedes cancelar la operación o hacer otra cosa en este caso.
+                        // ...
+                    }
+                }
+            }
+        }
     }
     public class VolverAPantallaPrincipal
     {

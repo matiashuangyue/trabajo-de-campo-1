@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+
+
+
 namespace trabajo_de_campo_1
 {
     public partial class Gestionar_Compra : Form
@@ -64,9 +67,11 @@ namespace trabajo_de_campo_1
 
         private void Gestionar_Compra_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'trabajoDeCampoDataSet5.DetallePedidos' Puede moverla o quitarla según sea necesario.
+            this.detallePedidosTableAdapter1.Fill(this.trabajoDeCampoDataSet5.DetallePedidos);
             CenterToScreen();
             // TODO: esta línea de código carga datos en la tabla 'trabajoDeCampoDataSet2.DetallePedidos' Puede moverla o quitarla según sea necesario.
-            this.detallePedidosTableAdapter.Fill(this.trabajoDeCampoDataSet2.DetallePedidos);
+          
 
         }
 
@@ -151,19 +156,41 @@ namespace trabajo_de_campo_1
                     else
                     {
                         MessageBox.Show("Detalle Pedido agregado con exito ");
-                        this.detallePedidosTableAdapter.Fill(this.trabajoDeCampoDataSet2.DetallePedidos);
                         dgvDetallePedidos.Refresh();
                     }
-
-
                 }
             }
 
         }
+        private bool HayDatosRellenados()
+        {
+            foreach (DataGridViewRow row in dgvDetallePedidos.Rows)
+            {
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    // Si la celda contiene algún valor, se considera que hay datos rellenados
+                    if (cell.Value != null && cell.Value.ToString().Trim() != "")
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false; // Si se llega aquí, no se encontraron datos rellenados en el DataGridView
+        }
 
         private void btnGenerarPedido_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Pedido generado con exito");
+            if (HayDatosRellenados() == false)
+            {
+                MessageBox.Show("aun no tiene ningun datos para generar pedidos");
+            }
+            else
+            {
+                DescargarPDF descargarPDF = new DescargarPDF();
+                descargarPDF.Show();
+                this.Hide();
+            }
         }
 
         private void txtCodigoProduc_TextChanged(object sender, EventArgs e)
@@ -197,6 +224,11 @@ namespace trabajo_de_campo_1
             {
                 e.Handled = true; // Cancelar el evento del teclado
             }
+        }
+
+        private void dgvDetallePedidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

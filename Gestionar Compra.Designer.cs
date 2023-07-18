@@ -50,19 +50,24 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btnGenerarPedido = new System.Windows.Forms.Button();
             this.dgvDetallePedidos = new System.Windows.Forms.DataGridView();
-            this.trabajoDeCampoDataSet2 = new trabajo_de_campo_1.TrabajoDeCampoDataSet2();
-            this.detallePedidosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.detallePedidosTableAdapter = new trabajo_de_campo_1.TrabajoDeCampoDataSet2TableAdapters.DetallePedidosTableAdapter();
             this.ID_DetallePedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cod_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID_Provedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID_Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.detallePedidosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.trabajoDeCampoDataSet5 = new trabajo_de_campo_1.TrabajoDeCampoDataSet5();
+            this.detallePedidosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.trabajoDeCampoDataSet2 = new trabajo_de_campo_1.TrabajoDeCampoDataSet2();
+            this.detallePedidosTableAdapter = new trabajo_de_campo_1.TrabajoDeCampoDataSet2TableAdapters.DetallePedidosTableAdapter();
+            this.detallePedidosTableAdapter1 = new trabajo_de_campo_1.TrabajoDeCampoDataSet5TableAdapters.DetallePedidosTableAdapter();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetallePedidos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trabajoDeCampoDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detallePedidosBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trabajoDeCampoDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallePedidosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trabajoDeCampoDataSet2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -281,7 +286,7 @@
             this.btnGenerarPedido.Name = "btnGenerarPedido";
             this.btnGenerarPedido.Size = new System.Drawing.Size(396, 79);
             this.btnGenerarPedido.TabIndex = 18;
-            this.btnGenerarPedido.Text = "General Pedido";
+            this.btnGenerarPedido.Text = "Generar Pedido";
             this.btnGenerarPedido.UseVisualStyleBackColor = false;
             this.btnGenerarPedido.Click += new System.EventHandler(this.btnGenerarPedido_Click);
             // 
@@ -292,30 +297,17 @@
             this.dgvDetallePedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_DetallePedido,
             this.Cod_Producto,
-            this.ID_Provedor,
+            this.ID_Proveedor,
             this.Cantidad,
             this.Precio});
-            this.dgvDetallePedidos.DataSource = this.detallePedidosBindingSource;
+            this.dgvDetallePedidos.DataSource = this.detallePedidosBindingSource1;
             this.dgvDetallePedidos.Location = new System.Drawing.Point(501, 17);
             this.dgvDetallePedidos.Name = "dgvDetallePedidos";
             this.dgvDetallePedidos.RowHeadersWidth = 51;
             this.dgvDetallePedidos.RowTemplate.Height = 27;
             this.dgvDetallePedidos.Size = new System.Drawing.Size(634, 221);
             this.dgvDetallePedidos.TabIndex = 19;
-            // 
-            // trabajoDeCampoDataSet2
-            // 
-            this.trabajoDeCampoDataSet2.DataSetName = "TrabajoDeCampoDataSet2";
-            this.trabajoDeCampoDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // detallePedidosBindingSource
-            // 
-            this.detallePedidosBindingSource.DataMember = "DetallePedidos";
-            this.detallePedidosBindingSource.DataSource = this.trabajoDeCampoDataSet2;
-            // 
-            // detallePedidosTableAdapter
-            // 
-            this.detallePedidosTableAdapter.ClearBeforeFill = true;
+            this.dgvDetallePedidos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetallePedidos_CellContentClick);
             // 
             // ID_DetallePedido
             // 
@@ -334,13 +326,13 @@
             this.Cod_Producto.Name = "Cod_Producto";
             this.Cod_Producto.Width = 125;
             // 
-            // ID_Provedor
+            // ID_Proveedor
             // 
-            this.ID_Provedor.DataPropertyName = "ID_Provedor";
-            this.ID_Provedor.HeaderText = "ID_Provedor";
-            this.ID_Provedor.MinimumWidth = 6;
-            this.ID_Provedor.Name = "ID_Provedor";
-            this.ID_Provedor.Width = 125;
+            this.ID_Proveedor.DataPropertyName = "ID_Proveedor";
+            this.ID_Proveedor.HeaderText = "ID_Proveedor";
+            this.ID_Proveedor.MinimumWidth = 6;
+            this.ID_Proveedor.Name = "ID_Proveedor";
+            this.ID_Proveedor.Width = 125;
             // 
             // Cantidad
             // 
@@ -358,12 +350,40 @@
             this.Precio.Name = "Precio";
             this.Precio.Width = 125;
             // 
+            // detallePedidosBindingSource1
+            // 
+            this.detallePedidosBindingSource1.DataMember = "DetallePedidos";
+            this.detallePedidosBindingSource1.DataSource = this.trabajoDeCampoDataSet5;
+            // 
+            // trabajoDeCampoDataSet5
+            // 
+            this.trabajoDeCampoDataSet5.DataSetName = "TrabajoDeCampoDataSet5";
+            this.trabajoDeCampoDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // detallePedidosBindingSource
+            // 
+            this.detallePedidosBindingSource.DataMember = "DetallePedidos";
+            this.detallePedidosBindingSource.DataSource = this.trabajoDeCampoDataSet2;
+            // 
+            // trabajoDeCampoDataSet2
+            // 
+            this.trabajoDeCampoDataSet2.DataSetName = "TrabajoDeCampoDataSet2";
+            this.trabajoDeCampoDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // detallePedidosTableAdapter
+            // 
+            this.detallePedidosTableAdapter.ClearBeforeFill = true;
+            // 
+            // detallePedidosTableAdapter1
+            // 
+            this.detallePedidosTableAdapter1.ClearBeforeFill = true;
+            // 
             // Gestionar_Compra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::trabajo_de_campo_1.Properties.Resources.clouds_bubble_pop_art_y8iuv5agjzzczq9v;
-            this.ClientSize = new System.Drawing.Size(1153, 519);
+            this.ClientSize = new System.Drawing.Size(1162, 473);
             this.Controls.Add(this.dgvDetallePedidos);
             this.Controls.Add(this.btnGenerarPedido);
             this.Controls.Add(this.groupBox2);
@@ -383,8 +403,10 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetallePedidos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trabajoDeCampoDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.detallePedidosBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trabajoDeCampoDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detallePedidosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trabajoDeCampoDataSet2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -416,9 +438,12 @@
         private TrabajoDeCampoDataSet2 trabajoDeCampoDataSet2;
         private System.Windows.Forms.BindingSource detallePedidosBindingSource;
         private TrabajoDeCampoDataSet2TableAdapters.DetallePedidosTableAdapter detallePedidosTableAdapter;
+        private TrabajoDeCampoDataSet5 trabajoDeCampoDataSet5;
+        private System.Windows.Forms.BindingSource detallePedidosBindingSource1;
+        private TrabajoDeCampoDataSet5TableAdapters.DetallePedidosTableAdapter detallePedidosTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID_DetallePedido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cod_Producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Provedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_Proveedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
     }

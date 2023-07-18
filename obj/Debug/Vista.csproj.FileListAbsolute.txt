@@ -22,3 +22,8 @@ D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de 
 D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo de campo 1.pdb
 D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo_de_campo_1.GestionarProductos.resources
 D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo_de_campo_1.GestionarProveedores.resources
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\bin\Debug\itextsharp.dll
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\bin\Debug\itextsharp.xmlworker.dll
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\bin\Debug\itextsharp.xml
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo_de_campo_1.DescargarPDF.resources
+D:\UAI\Tercer Año\Tercer Año Cuastrimetre 1\Ingenieria de software\trabajo de campo 1\obj\Debug\trabajo_de_campo_1.InfoTablas.resources
