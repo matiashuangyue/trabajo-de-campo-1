@@ -179,7 +179,9 @@ namespace trabajo_de_campo_1
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            VolverALogin();
+            VolverAPantallaPrincipal pantallaPrincipal = new VolverAPantallaPrincipal();
+            pantallaPrincipal.IrAPantallaPrincipal();
+            this.Close();
         }
 
         private void txtID_KeyPress(object sender, KeyPressEventArgs e)

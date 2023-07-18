@@ -1,0 +1,29 @@
+C:\Users\Ing\Downloads\Abrir Forms\Abrir Forms\COMUN\obj\Debug\COMUN.csprojResolveAssemblyReference.cache
+D:\Google Drive\PE\PROGRAMACION I\EJEMPLOS WINFORM C#\Abrir Forms\Abrir Forms\COMUN\obj\Debug\COMUN.csprojResolveAssemblyReference.cache
+C:\Users\Ing\Documents\Visual Studio 2012\Projects\EjemploUno\COMUN\bin\Debug\COMUN.dll
+C:\Users\Ing\Documents\Visual Studio 2012\Projects\EjemploUno\COMUN\bin\Debug\COMUN.pdb
+C:\Users\Ing\Documents\Visual Studio 2012\Projects\EjemploUno\COMUN\obj\Debug\COMUN.csprojResolveAssemblyReference.cache
+C:\Users\Ing\Documents\Visual Studio 2012\Projects\EjemploUno\COMUN\obj\Debug\COMUN.dll
+C:\Users\Ing\Documents\Visual Studio 2012\Projects\EjemploUno\COMUN\obj\Debug\COMUN.pdb
+C:\Users\Ing\Desktop\PROYECTOS DE EJEMPLOS\EjemploDos\COMUN\bin\Debug\COMUN.dll
+C:\Users\Ing\Desktop\PROYECTOS DE EJEMPLOS\EjemploDos\COMUN\bin\Debug\COMUN.pdb
+C:\Users\Ing\Desktop\PROYECTOS DE EJEMPLOS\EjemploDos\COMUN\obj\Debug\COMUN.csprojResolveAssemblyReference.cache
+C:\Users\Ing\Desktop\PROYECTOS DE EJEMPLOS\EjemploDos\COMUN\obj\Debug\COMUN.dll
+C:\Users\Ing\Desktop\PROYECTOS DE EJEMPLOS\EjemploDos\COMUN\obj\Debug\COMUN.pdb
+C:\UAI\PI-2019\Clase 11\EjemploDos\EjemploDos\COMUN\bin\Debug\COMUN.dll
+C:\UAI\PI-2019\Clase 11\EjemploDos\EjemploDos\COMUN\bin\Debug\COMUN.pdb
+C:\UAI\PI-2019\Clase 11\EjemploDos\EjemploDos\COMUN\obj\Debug\COMUN.csprojResolveAssemblyReference.cache
+C:\UAI\PI-2019\Clase 11\EjemploDos\EjemploDos\COMUN\obj\Debug\COMUN.dll
+C:\UAI\PI-2019\Clase 11\EjemploDos\EjemploDos\COMUN\obj\Debug\COMUN.pdb
+G:\UAI\seguda cuatrimetre\Programacion 1\ejercicios integrarle s\ejercicio integrar 2\COMUN\COMUN\bin\Debug\COMUN.dll
+G:\UAI\seguda cuatrimetre\Programacion 1\ejercicios integrarle s\ejercicio integrar 2\COMUN\COMUN\bin\Debug\COMUN.pdb
+G:\UAI\seguda cuatrimetre\Programacion 1\ejercicios integrarle s\ejercicio integrar 2\COMUN\COMUN\obj\Debug\COMUN.csprojAssemblyReference.cache
+G:\UAI\seguda cuatrimetre\Programacion 1\ejercicios integrarle s\ejercicio integrar 2\COMUN\COMUN\obj\Debug\COMUN.csproj.CoreCompileInputs.cache
+G:\UAI\seguda cuatrimetre\Programacion 1\ejercicios integrarle s\ejercicio integrar 2\COMUN\COMUN\obj\Debug\COMUN.dll
+G:\UAI\seguda cuatrimetre\Programacion 1\ejercicios integrarle s\ejercicio integrar 2\COMUN\COMUN\obj\Debug\COMUN.pdb
+G:\UAI\2 final de segunda cuatrimestre\practicando programacion 2\praticando 1\prueba comun\COMUN\COMUN\bin\Debug\COMUN.dll
+G:\UAI\2 final de segunda cuatrimestre\practicando programacion 2\praticando 1\prueba comun\COMUN\COMUN\bin\Debug\COMUN.pdb
+G:\UAI\2 final de segunda cuatrimestre\practicando programacion 2\praticando 1\prueba comun\COMUN\COMUN\obj\Debug\COMUN.csprojAssemblyReference.cache
+G:\UAI\2 final de segunda cuatrimestre\practicando programacion 2\praticando 1\prueba comun\COMUN\COMUN\obj\Debug\COMUN.csproj.CoreCompileInputs.cache
+G:\UAI\2 final de segunda cuatrimestre\practicando programacion 2\praticando 1\prueba comun\COMUN\COMUN\obj\Debug\COMUN.dll
+G:\UAI\2 final de segunda cuatrimestre\practicando programacion 2\praticando 1\prueba comun\COMUN\COMUN\obj\Debug\COMUN.pdb

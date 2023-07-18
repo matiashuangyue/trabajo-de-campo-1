@@ -21,7 +21,7 @@ namespace trabajo_de_campo_1
         private string cnn = "Data Source =DESKTOP-2F4NVAS\\YUESERVER; Initial Catalog = TrabajoDeCampo; Integrated Security= True";
         private void LoadProveedorNames()
         {
-            string cnn = "Data Source =DESKTOP-2F4NVAS\\YUESERVER; Initial Catalog = TrabajoDeCampo; Integrated Security= True";
+            
             // Limpiar el ComboBox antes de cargar los datos
             cbProveedores.Items.Clear();
 

@@ -83,5 +83,12 @@ namespace trabajo_de_campo_1
             infoTablas.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SignUp signUp = new SignUp();
+            signUp.Show();
+            this.Hide();
+        }
     }
 }
